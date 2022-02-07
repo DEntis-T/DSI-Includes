@@ -1,0 +1,1 @@
+#define YSI_NO_STUPID_TESTS
