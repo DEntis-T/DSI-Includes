@@ -1,9 +1,9 @@
 /**--------------------------------------------------------------------------**\
 					==============================
-					 y_hooks - Hook any callback!
+					 y_races - Race in YSI style
 					==============================
 Description:
-	Automatically hooks any callbacks with a very simple syntax.
+	/
 Legal:
 	Version: MPL 1.1
 	
