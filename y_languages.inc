@@ -90,6 +90,8 @@ Operators:
 </remarks>
 \**--------------------------------------------------------------------------**/
 
+#define YSI_LANGS_MACROS
+
 #include "internal\y_version"
 #define YSIM_U_DISABLE
 #include "y_master"
@@ -108,7 +110,16 @@ Operators:
 
 #define MAX_LANGUAGE_NAME (16)
 
+#if defined YSI_LANGS_MACROS
 #define Language_IsValid(%0) (Language:0 <= (%0) < YSI_MAX_LANGUAGES && YSI_g_sLanguages[(%0)][0])
+#else
+stock Language_IsValid(lang)
+{
+	if (Language:0 <= (lang) < YSI_MAX_LANGUAGES &&
+	YSI_g_sLanguages[(lang)][0]) return true;
+	return false;
+}
+#endif
 
 //#define FOREIGN forward
 //#define GLOBAL stock
