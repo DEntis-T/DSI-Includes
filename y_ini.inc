@@ -245,9 +245,7 @@ static stock
 	forward @INI_%1_%2(name[], value[]); \
 	@INI_%1_%2(name[], value[])
 
-#define INI:%0[%1](%2) \
-	forward @INI_%0_%1(%2); \
-	@INI_%0_%1(%2)
+#define INI:%0[%1](%2)  @INI_%0_%1(%2);@INI_%0_%1(%2)
 
 #if defined _inc_sscanf && 0
 	/**----------------------------------------------------------------------**\
